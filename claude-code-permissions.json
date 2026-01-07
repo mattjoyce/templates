@@ -1,0 +1,351 @@
+{
+  "permissions": {
+    "mode": "acceptEdits",
+    "allow": [
+      // Navigation & file operations
+      "Bash(ls:*)",
+      "Bash(cd:*)",
+      "Bash(cat:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(fd:*)",
+      "Bash(rg:*)",
+      "Bash(ag:*)",
+      "Bash(tree:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(sort:*)",
+      "Bash(uniq:*)",
+      "Bash(sed:*)",
+      "Bash(awk:*)",
+      "Bash(diff:*)",
+      "Bash(patch:*)",
+      
+      // Git operations
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git stash:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)",
+      "Bash(git rebase:*)",
+      "Bash(git reset:*)",
+      "Bash(git clean -n:*)",
+      "Bash(git remote:*)",
+      "Bash(git config:*)",
+      
+      // Python ecosystem
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(pip:*)",
+      "Bash(pip3:*)",
+      "Bash(poetry:*)",
+      "Bash(uv:*)",
+      "Bash(ruff check:*)",
+      "Bash(ruff format:*)",
+      "Bash(pytest:*)",
+      "Bash(black:*)",
+      "Bash(mypy:*)",
+      "Bash(flake8:*)",
+      "Bash(isort:*)",
+      "Bash(pylint:*)",
+      
+      // Node/JS ecosystem
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(yarn:*)",
+      "Bash(pnpm:*)",
+      "Bash(bun:*)",
+      "Bash(npx:*)",
+      "Bash(tsx:*)",
+      "Bash(eslint:*)",
+      "Bash(prettier:*)",
+      
+      // Other languages
+      "Bash(go:*)",
+      "Bash(rustc:*)",
+      "Bash(cargo:*)",
+      "Bash(make:*)",
+      "Bash(cmake:*)",
+      "Bash(gcc:*)",
+      "Bash(clang:*)",
+      
+      // Containers & orchestration (read-only ops)
+      "Bash(docker ps:*)",
+      "Bash(docker images:*)",
+      "Bash(docker logs:*)",
+      "Bash(docker inspect:*)",
+      "Bash(docker exec:*)",
+      "Bash(docker compose ps:*)",
+      "Bash(docker compose logs:*)",
+      "Bash(docker compose config:*)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "Bash(kubectl logs:*)",
+      "Bash(kubectl config:*)",
+      
+      // System tools
+      "Bash(which:*)",
+      "Bash(whoami:*)",
+      "Bash(hostname:*)",
+      "Bash(uname:*)",
+      "Bash(df:*)",
+      "Bash(du:*)",
+      "Bash(ps:*)",
+      "Bash(top:*)",
+      "Bash(htop:*)",
+      "Bash(lsof:*)",
+      "Bash(netstat:*)",
+      "Bash(ss:*)",
+      "Bash(ping:*)",
+      "Bash(traceroute:*)",
+      "Bash(dig:*)",
+      "Bash(nslookup:*)",
+      "Bash(ifconfig:*)",
+      "Bash(ip:*)",
+      
+      // Data tools
+      "Bash(jq:*)",
+      "Bash(yq:*)",
+      "Bash(sqlite3:*)",
+      "Bash(psql:*)",
+      "Bash(mysql:*)",
+      "Bash(redis-cli:*)",
+      
+      // Compression & archives
+      "Bash(tar:*)",
+      "Bash(gzip:*)",
+      "Bash(gunzip:*)",
+      "Bash(zip:*)",
+      "Bash(unzip:*)",
+      "Bash(bzip2:*)",
+      "Bash(xz:*)",
+      
+      // Utilities
+      "Bash(date:*)",
+      "Bash(echo:*)",
+      "Bash(printf:*)",
+      "Bash(env:*)",
+      "Bash(printenv:*)",
+      "Bash(basename:*)",
+      "Bash(dirname:*)",
+      "Bash(realpath:*)",
+      "Bash(readlink:*)",
+      "Bash(chmod:*)",
+      "Bash(tee:*)",
+      "Bash(xargs:*)",
+      "Bash(xargs basename:*)",
+      "Bash(bash:*)",
+      "Bash(sh:*)",
+      "Bash(zsh:*)",
+      "Bash(fish:*)",
+      "Bash(watch:*)",
+      "Bash(time:*)",
+      "Bash(timeout:*)",
+      
+      // Text processing
+      "Bash(vim:*)",
+      "Bash(nano:*)",
+      "Bash(less:*)",
+      "Bash(more:*)",
+      "Bash(hexdump:*)",
+      "Bash(xxd:*)",
+      "Bash(strings:*)",
+      "Bash(iconv:*)",
+      
+      // macOS specific
+      "Bash(pbcopy:*)",
+      "Bash(pbpaste:*)",
+      "Bash(open:*)",
+      "Bash(brew list:*)",
+      "Bash(brew info:*)",
+      "Bash(brew search:*)",
+      "Bash(sw_vers:*)",
+      "Bash(system_profiler:*)",
+      
+      // File edits
+      "Edit(**/*)",
+      "Update(*)",
+      
+      // Safe reads beyond project
+      "Read(~/.gitconfig)",
+      "Read(~/.ssh/config)",
+      "Read(~/.config/**)",
+      "Read(/usr/local/share/**)",
+      "Read(/opt/homebrew/**)",
+      "Read(/etc/hosts)",
+      "Read(/etc/passwd)",
+      "Read(/etc/group)"
+    ],
+    
+    "deny": [
+      // Ultra-destructive operations
+      "Bash(rm -rf:*)",
+      "Bash(rm -r:*)",
+      "Bash(rm --recursive:*)",
+      "Bash(rm:/*)",
+      "Bash(rm:/Users/*)",
+      "Bash(rm:/home/*)",
+      "Bash(rm:/System/*)",
+      "Bash(rm:/Library/*)",
+      "Bash(rmdir:/*)",
+      "Bash(dd:*)",
+      "Bash(mkfs:*)",
+      "Bash(fdisk:*)",
+      "Bash(sfdisk:*)",
+      "Bash(parted:*)",
+      "Bash(gparted:*)",
+      "Bash(wipefs:*)",
+      "Bash(cryptsetup:*)",
+      "Bash(shred:*)",
+      "Bash(srm:*)",
+      
+      // Network exfiltration (truly dangerous ones)
+      "Bash(ftp:*)",
+      "Bash(nc:*)",
+      "Bash(netcat:*)",
+      "Bash(socat:*)",
+      "Bash(telnet:*)",
+      
+      // Highly sensitive secrets
+      "Read(./**/*key*)",
+      "Read(./**/*cert*)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.p12)",
+      "Read(./**/*.pfx)",
+      "Read(~/.ssh/id_*)",
+      "Read(~/.ssh/*_rsa)",
+      "Read(~/.ssh/*_ed25519)",
+      "Read(~/.aws/credentials)",
+      "Read(~/.aws/config)",
+      "Read(~/.kube/config)",
+      "Read(./secrets/**)",
+      "Read(./**/secrets/**)",
+      
+      // System modification
+      "Bash(sudo:*)",
+      "Bash(su:*)",
+      "Bash(doas:*)",
+      "Bash(chown:*)",
+      "Bash(systemctl:*)",
+      "Bash(service:*)",
+      "Bash(launchctl load:*)",
+      "Bash(launchctl unload:*)",
+      "Bash(launchctl bootstrap:*)",
+      "Bash(crontab -e:*)",
+      "Bash(crontab -r:*)",
+      
+      // Package managers (destructive ops)
+      "Bash(brew uninstall:*)",
+      "Bash(brew remove:*)",
+      "Bash(apt remove:*)",
+      "Bash(apt purge:*)",
+      "Bash(apt-get remove:*)",
+      "Bash(apt-get purge:*)",
+      "Bash(dnf remove:*)",
+      "Bash(yum remove:*)",
+      "Bash(pacman -R:*)",
+      "Bash(pip uninstall:*)",
+      "Bash(npm uninstall -g:*)"
+    ],
+    
+    "ask": [
+      // Environment files (useful for local dev, but prompt)
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      
+      // Network tools (useful but prompt for awareness)
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(httpie:*)",
+      "Bash(http:*)",
+      "Bash(aria2c:*)",
+      
+      // SSH and remote operations
+      "Bash(ssh:*)",
+      "Bash(scp:*)",
+      "Bash(sftp:*)",
+      "Bash(rsync:*)",
+      "Bash(sshpass:*)",
+      "Bash(ssh-keygen:*)",
+      
+      // Potentially destructive but sometimes needed
+      "Bash(rm:*)",
+      "Bash(rmdir:*)",
+      "Bash(git clean -f:*)",
+      "Bash(git clean -fd:*)",
+      
+      // Publishing/deployment
+      "Bash(git push:*)",
+      "Bash(npm publish:*)",
+      "Bash(docker push:*)",
+      "Bash(docker compose up:*)",
+      "Bash(docker compose down:*)",
+      "Bash(docker build:*)",
+      "Bash(docker run:*)",
+      "Bash(kubectl apply:*)",
+      "Bash(kubectl delete:*)",
+      "Bash(kubectl create:*)",
+      
+      // Package installation
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(npm install -g:*)",
+      "Bash(yarn global add:*)",
+      "Bash(brew install:*)",
+      "Bash(apt install:*)",
+      "Bash(apt-get install:*)",
+      "Bash(dnf install:*)",
+      "Bash(yum install:*)",
+      "Bash(pacman -S:*)",
+      "Bash(poetry add:*)",
+      "Bash(cargo install:*)",
+      
+      // Database modifications
+      "Bash(psql -c DROP:*)",
+      "Bash(psql -c DELETE:*)",
+      "Bash(psql -c TRUNCATE:*)",
+      "Bash(mysql -e DROP:*)",
+      "Bash(mysql -e DELETE:*)",
+      "Bash(mysql -e TRUNCATE:*)",
+      "Bash(redis-cli FLUSHDB:*)",
+      "Bash(redis-cli FLUSHALL:*)",
+      
+      // System information that might be sensitive
+      "Bash(launchctl list:*)",
+      "Bash(crontab -l:*)",
+      
+      // Filesystem modifications
+      "Bash(chmod 777:*)",
+      "Bash(chmod -R:*)",
+      
+      // macOS system operations
+      "Bash(brew upgrade:*)",
+      "Bash(brew cleanup:*)",
+      "Bash(softwareupdate:*)"
+    ],
+    
+    "additionalDirectories": [
+      "/var/log/",
+      "/usr/local/bin/",
+      "/opt/homebrew/bin/",
+      "/usr/local/lib/",
+      "/opt/homebrew/lib/"
+    ],
+    
+    "defaultMode": "default"
+  }
+}
